@@ -18,7 +18,7 @@ const create = async (req: NextApiRequest, res: NextApiResponse) => {
 
       res.send({
         codo: 200,
-        data: todo
+        data: todo.identifiers[0].id
       })
 
     } catch (error) {
