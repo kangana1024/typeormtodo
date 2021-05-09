@@ -13,13 +13,13 @@ export class Todos {
   @Column("character varying", { name: "detail", length: 255 })
   detail: string
 
-  @Column("timestamp with local time zone", {
+  @Column("timestamptz", {
     name: "createAt",
     default: () => "CURRENT_TIMESTAMP"
   })
   createAt: Date
 
-  @Column("timestamp with local time zone", {
+  @Column("timestamptz", {
     name: "updatedAt",
     default: () => "CURRENT_TIMESTAMP"
   })

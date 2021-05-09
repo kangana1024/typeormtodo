@@ -1,4 +1,5 @@
 import { Connection, ConnectionManager, createConnection, getConnectionManager, ConnectionOptions } from "typeorm";
+import { Todos } from "../entity/todo";
 
 export class Database {
   private connectionManager: ConnectionManager
@@ -25,7 +26,7 @@ export class Database {
         username: process.env.POSTGRES_USER as string,
         password: process.env.POSTGRES_PASSWORD as string,
         database: process.env.POSTGRES_DB as string,
-        entities: [],
+        entities: [Todos],
         synchronize: false,
         migrationsRun: true,
         logging: false,
